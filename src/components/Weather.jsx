@@ -22,8 +22,8 @@ const Weather = () => {
       <div>
         <div className="flex flex-col">
           <input
-            className="rounded-md p-2 outline-none bg-transparent shadow-inner shadow-sky-900 ring-2 placeholder:text-slate-700"
-            placeholder="city..."
+            className="rounded-md p-2 outline-none bg-transparent shadow-inner shadow-slate-900 placeholder:text-slate-700 no-underline"
+            placeholder="Enter city..."
             onChange={(event) => {
               const str = event.target.value;
               setCity(str.charAt(0).toUpperCase() + str.slice(1).toLowerCase());
@@ -31,13 +31,13 @@ const Weather = () => {
           />
         </div>
         <button
-          className="text-center bg-gradient-to-tr from-red-600 via-amber-400 to-teal-600 w-full rounded-lg mt-5 hover:scale-105 ease-in-out duration-300 hover:shadow-sm hover:shadow-black p-2 text-white"
+          className="text-center bg-gradient-to-r from-teal-700 to-cyan-600 w-full rounded-lg mt-5 ease-in-out shadow-sm shadow-black p-2 text-white hover:animate-bounce"
           onClick={() => handleClick()}
         >
           Search
         </button>
       </div>
-      <div className=" flex flex-col flex-1 justify-center items-center w-full  rounded-lg shadow-inner shadow-sky-900 ring-2 p-2 gap-5 text-xl font-bold">
+      <div className=" flex flex-col flex-1 justify-center items-center w-full  rounded-lg shadow-inner shadow-slate-900 p-2 gap-5 text-xl font-bold">
         <div className="flex w-full px-5 justify-between items-center">
             <p className="">{data?data.main.temp:'--'}°C</p>
             <p>{data?data.name:"------"}</p>
